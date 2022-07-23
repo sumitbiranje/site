@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Site</title>
+        <!-- MDB icon -->
+        <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+        <!-- Google Fonts Roboto -->
+        <linkbrel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap"/>
+        <!-- MDB -->
+        <link rel="stylesheet" href="css/mdb.min.css" />
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+            .bg-image {
+                overflow-y: scroll;
+            }
+            .glass-1 {
+                background: rgba(255, 255, 255, .1);
+                box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(10px);
+                border-radius: 10px;
+                color: white;
+            }
+            .glass-2 {
+                background: rgba(255, 255, 255, .6);
+                box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(10px);
+                border-radius: 10px;
+            }
+            /* width */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: rgba(255, 255, 255, 0.2);
+                box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(10px);
+                border-radius: 5px;
+            }
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: rgba(255, 255, 255, .5);
+                box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(10px);
+                border-radius: 5px;
+            }
+            h1 {
+                text-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+                color: rgba(255, 255, 255, .3);
+            } 
+            .nav-item a:hover {
+                background: rgba(255, 255, 255, .1);
+                box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(10px);
+                border-radius: 5px;
+            }
+            .btn {
+                margin: 20px;
+            }
+            .form-outline {
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+    <!-- Background image -->
+    <div class="bg-image p-4 text-center shadow-1-strong rounded text-white" style="background-image: url('https://lh3.googleusercontent.com/blogger_img_proxy/ABLy4EyPgySVKIIYJAyR2vqrRElNdqhMooLPy3c_KvV2pHnRlozwxGbZF95m_EUw5kSzfqhfEnDX5oLJ6wXsZPFWfFauUzztJGnJLX42CYuWC07v81qzoGXwaWflyVjqPfm1NzyU9hIK_Yu9QfEH-uBuLbw=w919-h516-p-k-no-nu'); height: 100vh;">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg glass-1 ">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars text-light"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                        <img src="/img/logo.png" height="45" alt="MDB Logo" loading="lazy"/>
+                    </a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link text-light" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="main d-flex justify-content-center align-items-center h-100">
+            <div class="card glass-1 ">
+                <div class="card-body">
+                    <h1 class="test-light">Welcome to Next-Level.....</h1>
+                    <button type="button" class="btn btn-dark btn-lg glass-1" data-mdb-toggle="modal" data-mdb-target="#loginmodal">Login</button>
+                    <button type="button" class="btn btn-primary btn-lg glass-1" data-mdb-toggle="modal" data-mdb-target="#registermodal">Register</button>
+                </div>
+            </div>
+        </div>
+        <!-- Login Modal -->
+        <div class="modal fade glass-1" id="loginmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content glass-2">
+                    <div class="modal-header">
+                        <h3 class="modal-title text-dark">Login</h3>
+                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form>
+                    <div class="modal-body">
+                        <div class="form-outline mb-4">
+                            <i class="fas fa-exclamation-circle trailing text-danger"></i>
+                            <input type="text" id="username" class="form-control form-control-lg" name="username" />
+                            <label class="form-label" for="username">Username</label>
+                        </div>
+                        <div class="form-text text-danger">Username not found.</div>
+                        <div class="form-text text-danger">Username is required.</div>
+                        <div class="form-outline mb-4">
+                            <i class="fas fa-exclamation-circle trailing text-danger"></i>
+                            <input type="password" id="password" class="form-control form-control-lg" name="password" />
+                            <label class="form-label" for="password">Password</label>
+                        </div>
+                        <div class="form-text text-danger">Username not found.</div>
+                        <div class="form-text text-danger">Username is required.</div>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <a href="#!">Forgot password?</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger btn-lg" data-mdb-dismiss="modal">Close</button>
+                        <button type="button" name="login" class="btn btn-outline-primary btn-lg">Login</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+        <!-- Register Modal -->
+        <div class="modal fade glass-1" id="registermodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content glass-2">
+                    <div class="modal-header">
+                        <h3 class="modal-title text-dark">Register</h3>
+                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg">
+                                    <div class="form-outline mb-4">
+                                        <i class="fas fa-exclamation-circle trailing text-danger"></i>
+                                        <input type="text" id="fname" class="form-control form-control-lg" />
+                                        <label class="form-label" for="fname">First Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="form-outline mb-4">
+                                        <i class="fas fa-exclamation-circle trailing text-danger"></i>
+                                        <input type="text" id="lname" class="form-control form-control-lg" />
+                                        <label class="form-label" for="lname">Last Name</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-outline mb-2 datepicker" data-mdb-inline="true">
+                            <input type="text" id="dob" class="form-control form-control-lg"/>
+                            <label class="form-label" for="dob">Date Of Birth</label>
+                        </div>
+                        <select class="select">
+                            <option></option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                        <label class="form-label select-label">Gender</label>
+                        <div class="form-outline mb-2">
+                            <i class="fas fa-exclamation-circle trailing text-danger"></i>
+                            <input type="text" id="about" class="form-control form-control-lg" />
+                            <label class="form-label" for="about">About</label>
+                        </div>
+                        <select class="select">
+                            <option>Profession</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <label class="form-label select-label">Profession</label>
+                        </select>
+                        <div class="form-outline mb-2">
+                            <i class="fas fa-exclamation-circle trailing text-danger"></i>
+                            <input type="number" id="number" class="form-control form-control-lg" />
+                            <label class="form-label" for="number">Mobile Number</label>
+                        </div>
+                        <div class="form-outline mb-2">
+                            <i class="fas fa-exclamation-circle trailing text-danger"></i>
+                            <input type="text" id="email" class="form-control form-control-lg" />
+                            <label class="form-label" for="email">Email</label>
+                        </div>
+                        <div class="form-outline mb-2">
+                            <i class="fas fa-exclamation-circle trailing text-danger"></i>
+                            <input type="text" id="username" class="form-control form-control-lg" />
+                            <label class="form-label" for="username">Username</label>
+                        </div>
+                        <div class="form-outline mb-2">
+                            <i class="fas fa-exclamation-circle trailing text-danger"></i>
+                            <input type="text" id="password" class="form-control form-control-lg" />
+                            <label class="form-label" for="password">Password</label>
+                        </div>
+                        <div class="form-outline mb-2">
+                            <i class="fas fa-exclamation-circle trailing text-danger"></i>
+                            <input type="text" id="repassword" class="form-control form-control-lg" />
+                            <label class="form-label" for="repassword">Confirm Password</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger btn-lg" data-mdb-dismiss="modal">Close</button>
+                        <button type="submit" name="login" class="btn btn-outline-primary btn-lg">Register</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+        <footer class="text-center text-lg-start glass-1">
+            <div class="text-center p-3">© 2022 Copyright: <a class="text-light" href="#">Next-Level</a></div>
+        </footer> 
+    </div>
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+  </body>
+</html>
